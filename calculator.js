@@ -34,4 +34,4 @@ app.post('/bmicalculator', (req, res) => {
      res.send(`Your Bmi is ${Math.floor(parseFloat(weight) / (parseFloat(height) * parseFloat(height)))}`);
 })
 
-app.listen(3000, _ => console.log('server started on port 3000'));
+app.listen(process.env.PORT || 3001, _ => console.log('server started on port 3001'));
