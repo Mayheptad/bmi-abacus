@@ -8,16 +8,17 @@ app.use(express.urlencoded({
 app.use(express.static('Public'))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-})
+    res.sendFile(__dirname + '/bmicalculator.html');
+});
 
 app.post('/', (req, res) => {
     const {
         num1,
         num2
     } = req.body;
-    const result = Number(num1) + Number(num2);
-    res.send('The result is ' + result);
+    
+   const result = Number(num1) + Number(num2);
+   res.send('The result is ' + result);
 })
 
 app.get('/bmicalculator', (req, res) => {
